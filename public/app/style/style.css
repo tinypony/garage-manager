@@ -1,0 +1,246 @@
+body {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+}
+.shared-background {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  background-image: url(img/squirel.jpg);
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.shared-background .shared-logo {
+  color: white;
+  font-size: 36px;
+  padding-left: 20px;
+}
+
+.shared-background .main-screen-button {
+  left: calc(50% - 100px);
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  background: #FF005C;
+  text-align: center;
+  color: white;
+  top: 50%;
+}
+
+.shared-background .contact-details-pane {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 300px;
+  padding-left: 40px;
+}
+
+.shared-background .secondary-screen-form {
+  background: white;
+  box-shadow: 0px 2px 3px 3px rgba(0,0,0, 0.4);
+  top: 100px;
+  display: inline-block;
+  width: 380px;
+  left: calc(50% - 190px);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.shared-background .secondary-screen-form .input-field-container {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 55px;
+}
+
+label.required {
+  position: relative;
+}
+
+label.required::before {
+  position: absolute;
+  content: '*';
+  font-size: 20px;
+  color: #FF005C;
+  left: -10px;
+  height: 10px;
+  width: 10px;
+}
+
+.shared-background .secondary-screen-form .input-field-container.double {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shared-background .secondary-screen-form .input-field-container.double .spans {
+  flex-basis: 100%;
+}
+
+.shared-background .secondary-screen-form .input-field-container:not(.double) input {
+  width: 100%;
+}
+
+.shared-background .secondary-screen-form .input-field-container.double input {
+  width: 48%;
+}
+
+.secondary-screen-form .dropdown-menu .btn {
+  border-radius: 0px;
+  border: none;
+}
+
+.secondary-screen-form .dropdown-menu tbody .btn:not([disabled]) {
+  background: rgba(0, 155, 0, 0.3);
+}
+
+.secondary-screen-form .dropdown-menu tbody .btn:not([disabled]):hover,
+.secondary-screen-form .dropdown-menu tbody .btn:not([disabled]).active {
+  background: rgba(0, 155, 0, 0.7);
+  box-shadow: none;
+}
+
+.secondary-screen-form .dropdown-menu table thead tr:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-bottom:5px;
+}
+
+.secondary-screen-form .dropdown-menu table thead th {
+  font-weight: 500;
+  text-align: center;
+  padding-top:5px;
+  padding-bottom:7px;
+}
+
+.secondary-screen-form .dropdown-menu > li:nth-child(2),
+.secondary-screen-form .dropdown-menu > li:nth-child(3) {
+  display:none;
+}
+
+
+input {
+  border-radius: 0px;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,0.3);
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid rgba(255,0,0, 0.5);
+}
+
+.shared-background .secondary-screen-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.3);
+  height: 100px;
+  padding: 10px;
+}
+
+.shared-background .secondary-screen-form .validation-error-message {
+  font-size: 10px;
+  color: red;
+  bottom: -15px;
+  position: absolute;
+}
+
+.shared-background .secondary-screen-form .back {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  background: #FF005C;
+  text-align: center;
+  color: white;
+}
+
+.shared-background .secondary-screen-form .back.disabled {
+  cursor: default;
+  background: #AAA;
+  color: white;
+}
+
+.common-description {
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: space-around;
+  background: white;
+}
+
+.common-description ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+body:not(.first-load) .page {
+  transition: all 400ms;
+}
+
+.page-home,
+.page-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.page .movable {
+  position: absolute;
+  z-index: 10;
+  transition: all 400ms;
+}
+
+/*First page transitions*/
+
+body:not(.first-load) .page-home.ng-enter .main-screen-button {
+  left: 100%;
+}
+
+body:not(.first-load) .page-home.ng-enter-active .main-screen-button,
+body:not(.first-load) .page-home.ng-leave .main-screen-button {
+  left: calc(50% - 100px);
+}
+
+body:not(.first-load) .page-home.ng-leave .main-screen-button {
+  left: -200px;
+}
+
+body:not(.first-load) .page-home.ng-enter .contact-details-pane,
+body:not(.first-load) .page-home.ng-leave.ng-leave-active .contact-details-pane {
+  height: 0px;
+}
+
+body:not(.first-load) .page-home.ng-enter-active .contact-details-pane,
+body:not(.first-load) .page-home.ng-leave .contact-details-pane {
+  height: 300px;
+}
+
+
+/* secondary page transitions*/
+
+body:not(.first-load) .page-secondary.ng-enter .secondary-screen-form {
+  left: 100%;
+}
+
+body:not(.first-load) .page-secondary.ng-enter.ng-enter-active .secondary-screen-form {
+  left: calc(50% - 190px);
+}
+
+body:not(.first-load) .page-secondary.ng-leave .secondary-screen-form {
+  left: calc(50% - 190px);
+}
+
+body:not(.first-load) .page-secondary.ng-leave.ng-leave-active .secondary-screen-form {
+  left: -500px;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "megastore",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tinypony/megastore",
+  "license": "MIT",
+  "directory": "public/bower_components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.6"
+  }
+}
