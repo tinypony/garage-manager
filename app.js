@@ -52,7 +52,9 @@ app.use(session({
   }, 
   store: new MongoStore({ 
     mongooseConnection: mongoose.connection 
-  })
+  }),
+  resave: false,
+  saveUninitialized: false
 }));
 
 app.use(passport.initialize());

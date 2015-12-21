@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <!-- CSS -->
-        <!-- load bootstrap (bootswatch version) -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
           <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
@@ -20,7 +18,7 @@
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-0.14.3.min.js"></script>
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.min.js"></script>
 
-        <script src="./libs/js/moment.js"></script>
+        <script src="./bower_components/moment/moment.js"></script>
         <script src="app.js"></script>
 
     </head>

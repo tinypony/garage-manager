@@ -6,7 +6,7 @@ body {
   position: relative;
   width: 100%;
   height: 900px;
-  background-image: url(img/squirel.jpg);
+  background-image: url(img/closeup.jpg);
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
@@ -17,6 +17,7 @@ body {
   color: white;
   font-size: 36px;
   padding-left: 20px;
+  padding-top: 20px;
 }
 
 .shared-background .main-screen-button {
@@ -44,7 +45,7 @@ body {
 
 .shared-background .secondary-screen-form {
   background: white;
-  box-shadow: 0px 2px 3px 3px rgba(0,0,0, 0.4);
+  box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.4);
   top: 100px;
   display: inline-block;
   width: 380px;
@@ -126,7 +127,7 @@ label.required::before {
 }
 
 
-input {
+input.va-theme {
   border-radius: 0px;
   height: 30px;
   border: 1px solid rgba(0,0,0,0.3);
@@ -134,7 +135,7 @@ input {
   box-sizing: border-box;
 }
 
-input.ng-invalid.ng-touched {
+input.va-theme.ng-invalid.ng-touched {
   border: 1px solid rgba(255,0,0, 0.5);
 }
 
@@ -162,6 +163,16 @@ input.ng-invalid.ng-touched {
   background: #FF005C;
   text-align: center;
   color: white;
+}
+
+.shared-background .booked-message {
+  display: inline-block;
+  width: 400px;
+  background: white;
+  box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.4);
+  top: 100px;
+  left: calc(50% - 200px);
+  padding: 20px;
 }
 
 .shared-background .secondary-screen-form .back.disabled {
@@ -233,14 +244,22 @@ body:not(.first-load) .page-secondary.ng-enter .secondary-screen-form {
   left: 100%;
 }
 
-body:not(.first-load) .page-secondary.ng-enter.ng-enter-active .secondary-screen-form {
-  left: calc(50% - 190px);
-}
-
+body:not(.first-load) .page-secondary.ng-enter.ng-enter-active .secondary-screen-form,
 body:not(.first-load) .page-secondary.ng-leave .secondary-screen-form {
   left: calc(50% - 190px);
 }
 
-body:not(.first-load) .page-secondary.ng-leave.ng-leave-active .secondary-screen-form {
+body:not(.first-load) .page-secondary.ng-leave.ng-leave-active .secondary-screen-form,
+.page-secondary.booked .secondary-screen-form {
   left: -500px;
 }
+
+.page-secondary:not(.booked) .booked-message {
+  left: 100%;
+}
+
+.page-secondary.booked .booked-message {
+  left: calc(50% - 200px);
+}
+
+

@@ -44,7 +44,6 @@ animateApp.controller('secondaryController', function($scope, $location, $http) 
         if(this.form.$valid) {
 	    $http.post('/orders', $scope.booking)
 		.then(function(resp) {
-			
 			$scope.pageClass = 'page-secondary booked';
 		});
         }

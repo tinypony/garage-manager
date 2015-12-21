@@ -10,6 +10,7 @@ module.exports = function(app, passport) {
 
     // serve index
     app.get('/', idx.index);
+    require('./usermanagement.js')(app, passport);
     require('./order_api.js')(app, passport);
 
 };

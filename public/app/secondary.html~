@@ -63,7 +63,7 @@
 
   <div class="booked-message movable">
     <h4>Time has been reserved</h4>
-    <div>Bring your vehicle to Kujakuja 4, 00000 Lappeenranta on {{formatDate(booking.preferredDate)}}</div>
+    <div>Bring your vehicle to Kujakuja 4, 00000 Lappeenranta on {{booking.}}</div>
   </div>
 </div>
 
