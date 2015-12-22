@@ -13,15 +13,18 @@ animateApp.config(function($routeProvider) {
         // home page
         .when('/', {
             templateUrl: 'main.html',
-            controller: 'mainController',
-            animation: 'main'
+            controller: 'mainController'
         })
 
         // about page
         .when('/secondary', {
             templateUrl: 'secondary.html',
-            controller: 'secondaryController',
-            animation: 'secondary'
+            controller: 'secondaryController'
+        })
+
+        .when('/login', {
+            templateUrl: 'login.html',
+            controller: 'LoginCtrl'
         })
 
 });
@@ -77,6 +80,18 @@ animateApp.controller('secondaryController', function($scope, $location, $http) 
 
     $scope.formatDate = function(dt) {
       return moment(dt).format('DD/MM/YYYY');
+    }
+});
+
+// home page controller
+animateApp.controller('LoginCtrl', function($scope, $location) {
+    $scope.pageClass = 'page-login';
+    $scope.loginInfo = {
+        login: '',
+        password: ''
+    };
+    $scope.doLogin = function() {
+        
     }
 });
 
