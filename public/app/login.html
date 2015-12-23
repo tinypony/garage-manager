@@ -2,9 +2,10 @@
   <div class="shared-logo">VA Moto</div>
 </div>
 
-<form id="login-form" class="card-panel">
+<form id="login-form" class="card-panel movable">
 	<div class="form-header"><h3>Administrator login</h3></div>
 	<input placeholder="Login" id="login-input" type="text" ng-model="loginInfo.login"/>
 	<input placeholder="Password" id="password-input" type="password" ng-model="loginInfo.password"/>
 	<button id="login-button" ng-click="doLogin()">Login</button>
 </form>
+<ng-include src="'./common-description.html'"></ng-include>

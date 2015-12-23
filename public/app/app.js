@@ -27,6 +27,11 @@ animateApp.config(function($routeProvider) {
             controller: 'LoginCtrl'
         })
 
+        .when('/orders', {
+            templateUrl: 'orders.html',
+            controller: 'OrdersCtrl'
+        })
+
 });
 
 
@@ -91,16 +96,24 @@ animateApp.controller('LoginCtrl', function($scope, $location) {
         password: ''
     };
     $scope.doLogin = function() {
-        
+        console.log(this.loginInfo);
     }
 });
 
-animateApp.controller('ctrl', function($scope, $rootScope){
-      $rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute){
-        if(!prevRoute) {
-            setTimeout(function() {
-                $('body').removeClass('first-load');
-            }, 400);
-        }
-      });
+// home page controller
+animateApp.controller('OrdersCtrl', function($scope, $http) {
+    $scope.pageClass = 'page-orders';
+    $http.get('/orders').then(function(resp) {
+        $scope.orders = resp.data;
     });
+});
+
+animateApp.controller('ctrl', function($scope, $rootScope) {
+      $rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute){
+            if(!prevRoute) {
+                setTimeout(function() {
+                    $('body').removeClass('first-load');
+                }, 400);
+            }
+      });
+});

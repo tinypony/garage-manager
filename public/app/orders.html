@@ -1,0 +1,12 @@
+<div class="shared-background">
+  <div class="shared-logo">VA Moto</div>
+</div>
+
+<div class="orders card-panel">
+	<h3>New orders</h3>
+	<div class="order-panel" ng-repeat="order in orders">
+		<div class="client-identification">{{order.name}} [{{order.licensePlate}}]</div>
+		<div ng-if="order.phone" class="phone-number">{{order.phone}}</div>
+		<div class="problem-description">{{order.description}}</div>
+	</div>
+</div>

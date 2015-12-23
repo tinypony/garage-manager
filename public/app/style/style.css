@@ -199,10 +199,6 @@ input.va-theme.ng-invalid.ng-touched {
   padding-left: 0px;
 }
 
-.page-login .shared-background {
-  height: 300px;
-}
-
 #login-form {
   width: 320px;
   background: white;
@@ -242,7 +238,8 @@ body:not(.first-load) .page {
 }
 
 .page-home,
-.page-secondary {
+.page-secondary,
+.page-login {
   position: absolute;
   top: 0;
   left: 0;
@@ -305,4 +302,18 @@ body:not(.first-load) .page-secondary.ng-leave.ng-leave-active .secondary-screen
   left: calc(50% - 200px);
 }
 
+/* login page transitions*/
+
+body:not(.first-load) .page-login.ng-enter #login-form {
+  left: 100%;
+}
+
+body:not(.first-load) .page-login.ng-enter.ng-enter-active #login-form ,
+body:not(.first-load) .page-login.ng-leave #login-form {
+  left: calc(50% - 160px);
+}
+
+body:not(.first-load) .page-login.ng-leave.ng-leave-active #login-form {
+  left: -500px;
+}
 

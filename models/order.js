@@ -6,6 +6,7 @@ var OrderSchema = mongoose.Schema({
     email: {type: String, required: true},
     licensePlate: {type: String, required: true},
     description: {type: String, required: true},
+    preferredDate: {type: Date, required: true},
     created: Date
 });
 
